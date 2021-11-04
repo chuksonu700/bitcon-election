@@ -1,0 +1,38 @@
+.mycard {
+    display: none;
+}
+
+
+/* Make circles that indicate the steps of the form: */
+
+.step {
+    height: 25px;
+    width: 25px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.step:hover {
+    background-color: #292929;
+    color: white;
+}
+
+.active {
+    background-color: chocolate;
+}
+
+
+/* Mark the steps that are finished and valid: */
+
+.step.finish {
+    background-color: #04AA6D;
+}
+
+.step.finish:hover {
+    background-color: #025034;
+}
