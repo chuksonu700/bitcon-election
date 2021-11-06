@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="row m-3">
+        <div class="col-sm-6 text-center mx-auto">
+            <h1>Election Results</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="card-group">
+ <form action="/save-result" method="post">
+            <div class="col-sm-12">
+                <div class="card  m-2 mx-auto w-75 shadow">
+                    <h5 id="questions" class="card-header text-center">please select the polling to continue<span
+                            id="qNumbers"></span></h5>
+                    <div class="card-body">
+                        <div class="row">
+                            
+                            <div class="col-md-4 col-sm-12 m-1">
+                                <select class="form-select" aria-label="Default select example"
+                                    onchange="inputWard(this.value)" required>
+                                    <option selected value="">LGA select </option>
+                                    {{#each rows}}
+                                    <option value="{{this.lga_id}}">{{this.lga_name}}</option>
+                                    {{/each}}
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-12 m-1">
+                                <select id="ward" class="form-select" aria-label="Default select example"
+                                    onchange="inputPoll(this.value)" required>
+                                    <option selected value="">Ward Select </option>
+                                </select>
+                            </div>
+                            <div class="col-md-3 col-sm-12 m-1">
+                                <select id="polls" class="form-select" aria-label="Default select example" id="pools" name="polls" required>
+                                    <option selected value="">Polling Unit Select </option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-12 m-1">
+                                <select id="partyId" class="form-select" aria-label="Default select example" id="partty" name="party" required>
+                                            <option selected value="">Select Party </option>
+                                        </select>
+                            </div>
+                          
+                            <div class="col-md-4 col-sm-12 m-1">
+                               <input type="number" name="score" class="form-control"
+                                            placeholder="Enter Score" required>
+                            </div>
+                            <div class="col-md-3 col-sm-12 m-1">
+                                <input type="text" name="username" class="form-control"
+                                            placeholder="Enter Username" required>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" value="Continue" class="btn btn-block btn-primary m-2">
+                       
+                            </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row" id="holdform">
+        <div class="card-group">
+
+            <div class="col-sm-12" id="resultDisplay">
+                <div class="card  m-2 mx-auto w-75 shadow" id="noResult">
+                    <h5 id="questions" class="card-header text-center">Successfully <span id="pollUnit"></span></h5>
+                    <div class="card-body ">
+                        <div>
+                           
+                          
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

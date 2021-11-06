@@ -1,0 +1,89 @@
+<div class="container">
+  <form id="election" action="#" onsubmit="getResult();return false">
+    <div class="row m-3">
+      <div class="col-sm-6 text-center mx-auto">
+        <h1>Election Results</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card-group">
+
+        <div class="col-sm-12">
+          <div class="card  m-2 mx-auto w-75 shadow">
+            <h5 id="questions" class="card-header text-center">View Results of Elecetion in delta state<span
+                id="qNumbers"></span></h5>
+            <div class="card-body">
+              <div class="row">
+
+                <div class="col-md-4 col-sm-12 m-1">
+
+                  <select class="form-select" aria-label="Default select example" onchange="inputWard(this.value)">
+                    <option selected>LGA select </option>
+                    {{#each rows}}
+                    <option value="{{this.lga_id}}">{{this.lga_name}}</option>
+                    {{/each}}
+                  </select>
+                </div>
+
+                <div class="col-md-4 col-sm-12 m-1">
+                  <select id="ward" class="form-select" aria-label="Default select example"
+                    onchange="inputPoll(this.value)">
+                    <option selected>Ward Select </option>
+                  </select>
+                </div>
+
+                <div class="col-md-3 col-sm-12 m-1">
+                  <select id="polls" class="form-select" aria-label="Default select example" name="polls">
+                    <option selected>Polling Unit Select </option>
+
+                  </select>
+                </div>
+
+              </div>
+
+            </div>
+            <input type="button" value="See results" class="btn btn-block btn-primary m-2" onclick="getResultPolls()">
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="row" id="resultDisplay">
+      <div class="card-group">
+
+        <div class="col-sm-12">
+          <div class="card  m-2 mx-auto w-75 shadow">
+            <h5 id="questions" class="card-header text-center">Results <span id="pollUnit"></span></h5>
+            <div class="card-body">
+              <div id="table">
+                <table class="table table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Party</th>
+                    <th scope="col">Score</th>
+                  </tr>
+                </thead>
+                <tbody id="holdResult">
+                 
+                </tbody>
+              </table>
+              </div>
+              <div id="noResult">
+                 <h3>Sorry No Result Yet try Later</h3>
+              </div>
+             
+              
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </form>
+
+
+
+</div>

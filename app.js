@@ -6,8 +6,6 @@ const expressHbs = require('express-handlebars');
 const mysql = require('mysql');
 
 
-
-
 //initializing Express
 const app = express();
 
@@ -31,22 +29,22 @@ app.set('view engine', 'handlebars');
 
 
 app.get('/', (req, res) => {
-    res.render('home');
+    res.render('home')
 });
 
-
-
-
 //Setting up the routes
-const quizRoute = require('./routes/quiz');
+const pollsRoute = require('./routes/lga');
+const lgaRoute = require('./routes/polls');
+const scoreRoute = require('./routes/store');
 
 
-app.use(quizRoute);
-
-
+app.use(pollsRoute);
+app.use(lgaRoute);
+app.use(scoreRoute);
 
 const port = process.env.PORT || 9000;
 
 app.listen(port, () => {
     console.log(`Server started on port ${port}`);
+    console.log(Math.random());
 });

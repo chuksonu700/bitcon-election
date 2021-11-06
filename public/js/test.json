@@ -1,0 +1,41 @@
+[{
+        "ward_name": "Ezi",
+        "ward_id": 10
+    },
+    {
+        "ward_name": "Idumuje - Unor",
+        "ward_id": 8
+    },
+    {
+        "ward_name": "Issele - Azagba",
+        "ward_id": 5
+    },
+    {
+        "ward_name": "Issele Uku I",
+        "ward_id": 6
+    },
+    {
+        "ward_name": "Issele Uku Ii",
+        "ward_id": 7
+    },
+    {
+        "ward_name": "Obior",
+        "ward_id": 1
+    },
+    {
+        "ward_name": "Obomkpa",
+        "ward_id": 3
+    },
+    {
+        "ward_name": "Onicha - Olona",
+        "ward_id": 4
+    },
+    {
+        "ward_name": "Onicha Ugbo",
+        "ward_id": 2
+    },
+    {
+        "ward_name": "Ukwu - Nzu",
+        "ward_id": 9
+    }
+]
